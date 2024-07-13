@@ -1,0 +1,27 @@
+:root {
+    --hue: 22;
+    --bg : hsl(0,0,100%) ; 
+    --fg : hsl(var(--hue),10%,10%); 
+    --trans-dur : 0.3s; 
+    --trans-timing-1 : cubic-bezier(0.37,0,0.63,1); 
+    --trans-timing-2 : cubic-bezier(0.34,1.53,0.64,1);
+    font-size: calc(16px +(24 - 16) * (100vw - 320px) / (2560 - 320)); 
+}
+
+*{
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;m
+}
+
+body,
+button,
+input {
+	color: var(--fg);
+	font: 1em/1.5 Nunito, sans-serif;
+	transition:
+		background-color var(--trans-dur) var(--trans-timing1),
+		box-shadow var(--trans-dur) var(--trans-timing1),
+		color var(--trans-dur) var(--trans-timing1);
+}
